@@ -9,13 +9,15 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="bg-light">
-    <!-- Üst Menü -->
+    <!-- Menü Kısmı (Yeni Sade Tasarım) -->
     <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
         <div class="container">
-            <a class="navbar-brand" href="index.html">Görkem Polat</a>
-            <div class="collapse navbar-collapse">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Hakkında</a></li>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0 fs-5">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Ana Sayfa</a></li>
                     <li class="nav-item"><a class="nav-link active" href="cv.html">Özgeçmiş</a></li>
                     <li class="nav-item"><a class="nav-link" href="sehrim.html">Şehrim</a></li>
                     <li class="nav-item"><a class="nav-link" href="miras.html">Takımımız</a></li>
@@ -27,14 +29,13 @@
         </div>
     </nav>
 
-    <!-- Ana Gövde (Semantik: main) -->
+    <!-- Ana Gövde -->
     <main class="container mt-5 mb-5">
         <div class="row">
             
-            <!-- Sol Kolon: Profil Kartı (Semantik: aside) -->
+            <!-- Sol Kolon: Profil Kartı -->
             <aside class="col-lg-4 mb-4">
                 <div class="card shadow-sm border-0 p-4 h-100 text-center">
-                    <!-- Profil Başlığı (Semantik: header) -->
                     <header class="mb-4">
                         <img src="ben.jpg" alt="Görkem Polat" class="img-fluid rounded-circle shadow-sm mb-3 border border-3 border-light" style="width: 160px; height: 160px; object-fit: cover;">
                         <h1 class="h3 mb-1">Görkem Polat</h1>
@@ -49,38 +50,21 @@
                 </div>
             </aside>
 
-            <!-- Sağ Kolon: Detaylı Bilgiler (Semantik: section) -->
+            <!-- Sağ Kolon: Detaylı Bilgiler -->
             <section class="col-lg-8">
                 
                 <!-- Eğitim Bilgileri -->
                 <div class="card shadow-sm border-0 p-4 mb-4">
                     <h2 class="h4 border-bottom pb-2 mb-4">Eğitim Bilgileri</h2>
-                    <!-- Üniversite (Semantik: article) -->
                     <article class="mb-4">
                         <h3 class="h5 mb-1 text-dark">Sakarya Üniversitesi</h3>
                         <p class="mb-1 fw-bold text-secondary">Bilgisayar Mühendisliği (Lisans)</p>
                         <p class="text-muted small mb-0">2025 - Günümüz</p>
                     </article>
-                    <!-- Lise (Semantik: article) -->
                     <article>
                         <h3 class="h5 mb-1 text-dark">Hasanoğlan Atatürk Fen Lisesi</h3>
                         <p class="mb-1 fw-bold text-secondary">Sayısal Bölümü</p>
                         <p class="text-muted small mb-0">2020 - 2024 (Mezun)</p>
-                    </article>
-                </div>
-
-                <!-- Projeler -->
-                <div class="card shadow-sm border-0 p-4 mb-4">
-                    <h2 class="h4 border-bottom pb-2 mb-4">Projeler & Çalışmalar</h2>
-                    <article class="mb-4">
-                        <h3 class="h6 fw-bold mb-1">Çizim Programı Dizaynı</h3>
-                        <p class="text-primary small mb-2">Nesneye Dayalı Programlama Projesi</p>
-                        <p class="mb-0 text-muted">Nesne yönelimli mimari prensiplerine uygun olarak tasarlanan ve geliştirilen kapsamlı çizim uygulaması.</p>
-                    </article>
-                    <article>
-                        <h3 class="h6 fw-bold mb-1">Kişisel Portfolyo Sitesi</h3>
-                        <p class="text-primary small mb-2">Web Teknolojileri Projesi</p>
-                        <p class="mb-0 text-muted">HTML5 semantik etiketleri ve Bootstrap 5 kullanılarak geliştirilen, tamamen responsive web arayüzü.</p>
                     </article>
                 </div>
 
@@ -101,7 +85,7 @@
         </div>
     </main>
 
-    <!-- Footer (Semantik: footer) -->
+    <!-- Footer -->
     <footer class="text-center py-4 text-muted border-top bg-white">
         <p class="mb-0">&copy; 2026 Görkem Polat | Web Teknolojileri Projesi</p>
     </footer>
