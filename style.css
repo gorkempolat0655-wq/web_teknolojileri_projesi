@@ -1,0 +1,64 @@
+/* =========================================
+   GÖRKEM POLAT - WEB TEKNOLOJİLERİ PROJESİ
+   ÖZEL STİL DOSYASI (STYLE.CSS)
+========================================= */
+
+/* Tüm sayfalar için yumuşak kaydırma efekti */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Sitenin genel yazı tipini biraz daha modern yapalım */
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+/* -----------------------------------------
+   1. İLGİ ALANLARIM SAYFASI: KART HOVER EFEKTİ
+   (Kartların üzerine gelince yukarı kalkması)
+----------------------------------------- */
+.hover-effect {
+    /* Animasyonun yumuşak olması için transition ekliyoruz */
+    transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+}
+
+/* Mouse ile kartın üzerine gelindiğinde hafifçe yukarı kalksın ve gölgesi artsın */
+.hover-effect:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* -----------------------------------------
+   2. MENÜ (NAVBAR) AYARLARI
+----------------------------------------- */
+/* Menüdeki linklerin üzerine gelince rengi yumuşakça değişsin */
+.navbar-nav .nav-link {
+    transition: color 0.3s ease;
+}
+
+/* Hangi sayfadaysak o sayfanın menüdeki altı çizili ve kalın olsun */
+.navbar-nav .nav-link.active {
+    font-weight: 700;
+    border-bottom: 2px solid white;
+}
+
+/* -----------------------------------------
+   3. GÖRSEL AYARLARI (SLIDER & RESİMLER)
+----------------------------------------- */
+/* Şehrim sayfasındaki slider resimlerinin üzerine gelince hafif karararak yazıyı öne çıkarsın */
+.carousel-inner img {
+    transition: filter 0.3s ease;
+}
+
+.carousel-inner:hover img {
+    filter: brightness(85%);
+}
+
+/* Ana Sayfa ve CV'deki yuvarlak resimlere hafif bir parlama efekti */
+.rounded-circle {
+    transition: box-shadow 0.3s ease;
+}
+
+.rounded-circle:hover {
+    box-shadow: 0 0 15px rgba(13, 110, 253, 0.5) !important;
+}
