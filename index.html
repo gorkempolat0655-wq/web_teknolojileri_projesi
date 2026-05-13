@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Görkem Polat - Ana Sayfa</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="bg-light">
-    <!-- Menü -->
-    <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+    <nav class="navbar navbar-expand-lg bg-dark sticky-top" data-bs-theme="dark">
         <div class="container">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -28,61 +29,111 @@
         </div>
     </nav>
 
-    <!-- Renkli Başlık (Koyu Tema) -->
-    <header class="text-white text-center py-5 mb-5 shadow-sm" style="background: linear-gradient(135deg, #212529, #495057);">
-        <div class="container py-3">
-            <h1 class="display-4 fw-bold">Görkem Polat</h1>
-            <p class="lead mb-0 text-light">Sakarya Üniversitesi Bilgisayar Mühendisliği Öğrencisi</p>
+    <header class="text-white text-center py-5 mb-5 shadow-sm" style="background: linear-gradient(135deg, #1a1e21, #343a40);" data-aos="fade-down">
+        <div class="container py-4">
+            <img src="vesikalik.jpg" alt="Görkem Polat Profil" class="rounded-circle img-thumbnail mb-4 shadow-lg hover-effect" style="width: 150px; height: 150px; object-fit: cover;" data-aos="zoom-in" data-aos-delay="200">
+            <h1 class="display-3 fw-bold mb-2">Görkem Polat</h1>
+            <p class="lead mb-4 text-light">Sakarya Üniversitesi Bilgisayar Mühendisliği Öğrencisi</p>
+            
+            <div class="d-flex gap-2 justify-content-center" data-aos="fade-up" data-aos-delay="400">
+                <a href="cv.html" class="btn btn-warning btn-lg fw-bold rounded-pill shadow-sm"><i class="fa-solid fa-file-pdf me-2"></i>Özgeçmişimi Gör</a>
+                <a href="iletisim.html" class="btn btn-outline-light btn-lg rounded-pill shadow-sm"><i class="fa-solid fa-envelope me-2"></i>Bana Ulaş</a>
+            </div>
         </div>
     </header>
 
-    <!-- Ana İçerik -->
     <main class="container mb-5">
         <div class="row">
-            <!-- Sol Taraf -->
-            <div class="col-lg-8 mb-4 mb-lg-0">
-                <div class="card shadow-sm border-0 p-4 h-100">
-                    <h2 class="h3 border-bottom pb-2 mb-3">Ben Kimim?</h2>
-                    <p class="lead text-muted">Merhaba, ben Görkem Polat. Eğitimime Sakarya'da devam ediyorum.</p>
-                    <p>Bölümüm gereği yazılım dünyasına giriş yaptım ve şu an temel programlama dilleri ile web teknolojileri üzerine kendimi geliştiriyorum. Projeler üretmek ve bu süreçte yeni teknolojiler öğrenmek temel hedeflerim arasında.</p>
+            <div class="col-lg-8 mb-4 mb-lg-0" data-aos="fade-up" data-aos-delay="100">
+                <div class="card shadow border-0 p-4 h-100 hover-effect">
+                    
+                    <h2 class="h3 border-bottom pb-2 mb-3 text-primary"><i class="fa-solid fa-user-astronaut me-2"></i>Ben Kimim?</h2>
+                    <p class="lead text-muted">Merhaba, ben Görkem Polat. Sakarya Üniversitesi'nde mühendislik eğitimime devam ediyorum.</p>
+                    <p>Ankara ve Sakarya arasında mekik dokuduğum yoğun bir tempodayım. Yazılım dünyasına olan merakımı akademik eğitimimle birleştirerek geleceğin teknolojilerini öğrenmeye odaklanıyorum.</p>
 
-                    <div class="mt-4">
-                        <h3 class="h5 mb-3 text-warning">Efsane Galatasaray Anısı</h3>
-                        <div class="ratio ratio-16x9 shadow-sm rounded overflow-hidden">
-                            <!-- SENİN İSTEDİĞİN VİDEO BURAYA EKLENDİ -->
-                            <iframe src="https://www.youtube.com/embed/5LRMTV_rd9A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <div class="mt-4 pt-3" data-aos="zoom-in" data-aos-delay="300">
+                        <img src="kampus.jpg" alt="Sakarya Üniversitesi Kampüsü" class="img-fluid rounded shadow hover-effect" style="width: 100%; height: 350px; object-fit: cover;">
+                        <p class="text-center text-muted small mt-2">Akademik Hayatımın Merkezi: Sakarya Üniversitesi Kampüsü</p>
+                    </div>
+
+                    <div class="mt-5 border-top pt-4">
+                        <h2 class="h3 mb-4 text-success"><i class="fa-solid fa-icons me-2"></i>Neler Yapıyorum? (Hobiler & Etkinlikler)</h2>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <div class="p-3 border rounded bg-light hover-effect h-100">
+                                    <h5 class="text-danger"><i class="fa-solid fa-gamepad me-2"></i>Oyun Dünyası</h5>
+                                    <p class="small mb-0">Derin senaryosu olan hikayeli oyunlardan ve online arenalardaki rekabetçi yapımlardan büyük zevk alıyorum.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="p-3 border rounded bg-light hover-effect h-100">
+                                    <h5 class="text-primary"><i class="fa-solid fa-film me-2"></i>Dizi & Sinema</h5>
+                                    <p class="small mb-0">Marvel evreni başta olmak üzere, kurgusal derinliği olan fantastik filmler ve bilim kurgu yapımları ilgimi çekiyor.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="p-3 border rounded bg-light hover-effect h-100">
+                                    <h5 class="text-warning"><i class="fa-solid fa-futbol me-2"></i>Halı Saha Etkinlikleri</h5>
+                                    <p class="small mb-0">Haftalık halı saha maçları, hem sosyal kalmamı sağlıyor hem de spor tutkumu canlı tutuyor.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="p-3 border rounded bg-light hover-effect h-100">
+                                    <h5 class="text-success"><i class="fa-solid fa-headphones me-2"></i>Müzik Tutkusu</h5>
+                                    <p class="small mb-0">Özellikle çalışırken veya yoldayken Kaleo gibi grupların rock ve blues tınıları vazgeçilmez eşlikçim.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-5 pt-3 border-top">
+                        <h3 class="h5 mb-3 text-warning"><i class="fa-solid fa-trophy me-2"></i>Sarı Kırmızı Tutkum</h3>
+                        <div class="ratio ratio-16x9 shadow rounded overflow-hidden">
+                            <iframe src="https://www.youtube.com/embed/5LRMTV_rd9A" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Sağ Taraf -->
-            <div class="col-lg-4">
-                <div class="card shadow-sm border-0 h-100 p-4">
-                    <h3 class="h5 border-bottom pb-2 mb-3">Kısa Bilgiler</h3>
-                    <ul class="list-unstyled mb-4">
-                        <li class="mb-2"><strong>📍 Memleket:</strong> Samsun</li>
-                        <li class="mb-2"><strong>🏡 Yaşadığı Şehir:</strong> Ankara</li>
-                        <li class="mb-2"><strong>🎓 Eğitim:</strong> Sakarya Üniversitesi</li>
-                        <li class="mb-2"><strong>⚽ Takım:</strong> Galatasaray</li>
+            <div class="col-lg-4" data-aos="fade-left" data-aos-delay="200">
+                <div class="card shadow border-0 h-100 p-4 hover-effect">
+                    <h3 class="h5 border-bottom pb-2 mb-3 text-success"><i class="fa-solid fa-circle-info me-2"></i>Kimlik Kartı</h3>
+                    <ul class="list-group list-group-flush mb-4">
+                        <li class="list-group-item bg-transparent px-0"><i class="fa-solid fa-map-location-dot text-danger me-2"></i> <strong>Memleket:</strong> Samsun</li>
+                        <li class="list-group-item bg-transparent px-0"><i class="fa-solid fa-city text-primary me-2"></i> <strong>Yaşadığı Şehir:</strong> Ankara</li>
+                        <li class="list-group-item bg-transparent px-0"><i class="fa-solid fa-graduation-cap text-success me-2"></i> <strong>Eğitim:</strong> Sakarya Üni.</li>
+                        <li class="list-group-item bg-transparent px-0"><i class="fa-solid fa-futbol text-warning me-2"></i> <strong>Takım:</strong> Galatasaray</li>
                     </ul>
 
-                    <h3 class="h5 border-bottom pb-2 mb-3">Hobilerim</h3>
-                    <ul class="list-unstyled mb-0">
-                        <li>🎮 Bilgisayar oyunları</li>
-                        <li>🎬 Dizi ve film izlemek</li>
-                        <li>⚽ Halı sahada futbol oynamak</li>
-                        <li>🎧 Müzik dinlemek</li>
+                    <h3 class="h5 border-bottom pb-2 mb-3 text-info"><i class="fa-solid fa-link me-2"></i>Hızlı Menü</h3>
+                    <div class="d-grid gap-2 mb-4">
+                        <a href="cv.html" class="btn btn-outline-primary btn-sm">Özgeçmiş Detayları</a>
+                        <a href="ilgi.html" class="btn btn-outline-success btn-sm">İlgi Alanlarım</a>
+                        <a href="iletisim.html" class="btn btn-outline-danger btn-sm">Bana Ulaşın</a>
+                    </div>
+
+                    <h3 class="h5 border-bottom pb-2 mb-3 text-secondary"><i class="fa-solid fa-star me-2"></i>Özet İlgi Alanları</h3>
+                    <ul class="list-group list-group-flush mb-0">
+                        <li class="list-group-item bg-transparent px-0"><i class="fa-solid fa-film text-secondary me-2"></i> Marvel & Fantastik Sinema</li>
+                        <li class="list-group-item bg-transparent px-0"><i class="fa-solid fa-gamepad text-secondary me-2"></i> Hikayeli & Rekabetçi Oyunlar</li>
+                        <li class="list-group-item bg-transparent px-0"><i class="fa-solid fa-shoe-prints text-secondary me-2"></i> Halı Saha Maçları</li>
+                        <li class="list-group-item bg-transparent px-0"><i class="fa-solid fa-headphones text-secondary me-2"></i> Rock & Blues Müzik</li>
                     </ul>
                 </div>
             </div>
         </div>
     </main>
 
-    <footer class="text-center py-4 text-muted border-top bg-white">
-        <p class="mb-0">&copy; 2026 Görkem Polat | Web Teknolojileri Projesi</p>
+    <footer class="bg-dark text-white text-center py-4 border-top border-secondary mt-5">
+        <div class="container">
+            <p class="mb-1">© 2026 Görkem Polat | Bilgisayar Mühendisliği | Web Teknolojileri Projesi</p>
+        </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 800, once: true });
+    </script>
 </body>
 </html>

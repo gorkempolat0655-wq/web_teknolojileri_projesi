@@ -5,67 +5,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Görkem Polat - Şehrim (Samsun)</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="bg-light">
-    <!-- Menü -->
-    <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
-        <div class="container">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav mx-auto mb-2 mb-lg-0 fs-5">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Ana Sayfa</a></li>
-                    <li class="nav-item"><a class="nav-link" href="cv.html">Özgeçmiş</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="sehrim.html">Şehrim</a></li>
-                    <li class="nav-item"><a class="nav-link" href="miras.html">Takımımız</a></li>
-                    <li class="nav-item"><a class="nav-link" href="ilgi.html">İlgi Alanlarım</a></li>
-                    <li class="nav-item"><a class="nav-link" href="iletisim.html">İletişim</a></li>
-                    <li class="nav-item"><a class="nav-link" href="login.html">Giriş Yap</a></li>
-                </ul>
+    
+    <header>
+        <nav class="navbar navbar-expand-lg bg-dark sticky-top" data-bs-theme="dark">
+            <div class="container">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0 fs-5">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Ana Sayfa</a></li>
+                        <li class="nav-item"><a class="nav-link" href="cv.html">Özgeçmiş</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="sehrim.html">Şehrim</a></li>
+                        <li class="nav-item"><a class="nav-link" href="miras.html">Takımımız</a></li>
+                        <li class="nav-item"><a class="nav-link" href="ilgi.html">İlgi Alanlarım</a></li>
+                        <li class="nav-item"><a class="nav-link" href="iletisim.html">İletişim</a></li>
+                        <li class="nav-item"><a class="nav-link" href="login.html">Giriş Yap</a></li>
+                    </ul>
+                </div>
             </div>
-        </div>
-    </nav>
+        </nav>
 
-    <!-- Renkli Başlık (Doğa Yeşili Tema) -->
-    <header class="text-white text-center py-5 mb-5 shadow-sm" style="background: linear-gradient(135deg, #198754, #20c997);">
-        <div class="container py-3">
-            <h1 class="display-4 fw-bold">Karadeniz'in İncisi: Samsun</h1>
-            <p class="lead mb-0 text-light">Milli Mücadele'nin meşalesinin yakıldığı, doğası ve tarihiyle büyüleyen şehir.</p>
+        <div class="text-white text-center py-5 mb-5 shadow-sm" style="background: linear-gradient(135deg, #004e92, #000428);" data-aos="fade-down">
+            <div class="container py-3">
+                <h1 class="display-4 fw-bold"><i class="fa-solid fa-city me-3"></i>Karadeniz'in İncisi: Samsun</h1>
+                <p class="lead mb-0 text-light">Milli Mücadele'nin meşalesinin yakıldığı, doğası ve tarihiyle büyüleyen şehir.</p>
+            </div>
         </div>
     </header>
 
-    <!-- Ana İçerik -->
     <main class="container mb-5">
-        <div class="row align-items-center mb-5">
-            <div class="col-md-5 mb-4 mb-md-0">
-                <div class="card shadow-sm border-0 p-4 h-100">
-                    <h2 class="h4 border-bottom pb-2 mb-3">Şehir Rehberi</h2>
+        <section class="row align-items-center mb-5">
+            <article class="col-md-5 mb-4 mb-md-0" data-aos="fade-right" data-aos-delay="100">
+                <div class="card shadow border-0 p-4 h-100 hover-effect">
+                    <h2 class="h4 border-bottom pb-2 mb-3 text-primary"><i class="fa-solid fa-map-location-dot me-2"></i>Şehir Rehberi</h2>
                     <ul class="list-group list-group-flush mb-4">
-                        <li class="list-group-item d-flex justify-content-between align-items-center">
-                            <strong>Nüfus:</strong> <span>~1.37 Milyon</span>
+                        <li class="list-group-item bg-transparent d-flex justify-content-between align-items-center">
+                            <span><i class="fa-solid fa-users text-primary me-2"></i><strong>Nüfus:</strong></span> <span>~1.37 Milyon</span>
                         </li>
-                        <li class="list-group-item d-flex justify-content-between align-items-center">
-                            <strong>Bölge:</strong> <span>Orta Karadeniz</span>
+                        <li class="list-group-item bg-transparent d-flex justify-content-between align-items-center">
+                            <span><i class="fa-solid fa-compass text-danger me-2"></i><strong>Bölge:</strong></span> <span>Orta Karadeniz</span>
                         </li>
-                        <li class="list-group-item d-flex justify-content-between align-items-center">
-                            <strong>Plaka:</strong> <span>55</span>
+                        <li class="list-group-item bg-transparent d-flex justify-content-between align-items-center">
+                            <span><i class="fa-solid fa-car text-success me-2"></i><strong>Plaka:</strong></span> <span>55</span>
                         </li>
                     </ul>
 
-                    <h3 class="h5 mt-2 mb-3">Gezilecek Yerler</h3>
+                    <h3 class="h5 mt-2 mb-3 text-secondary"><i class="fa-solid fa-camera me-2"></i>Gezilecek Yerler</h3>
                     <div class="d-flex flex-wrap gap-2">
-                        <span class="badge bg-primary fs-6 fw-normal">Bandırma Vapuru</span>
-                        <span class="badge bg-primary fs-6 fw-normal">Amisos Tepesi</span>
-                        <span class="badge bg-primary fs-6 fw-normal">Atatürk Heykeli (Onur Anıtı)</span>
-                        <span class="badge bg-primary fs-6 fw-normal">Şahinkaya Kanyonu</span>
+                        <span class="badge bg-primary fs-6 fw-normal shadow-sm">Bandırma Vapuru</span>
+                        <span class="badge bg-primary fs-6 fw-normal shadow-sm">Amisos Tepesi</span>
+                        <span class="badge bg-primary fs-6 fw-normal shadow-sm">Onur Anıtı</span>
+                        <span class="badge bg-primary fs-6 fw-normal shadow-sm">Şahinkaya Kanyonu</span>
+                        <span class="badge bg-info text-dark fs-6 fw-normal shadow-sm">Amazon Köyü</span>
+                        <span class="badge bg-success fs-6 fw-normal shadow-sm">Kızılırmak Deltası</span>
+                        <span class="badge bg-secondary fs-6 fw-normal shadow-sm">Gazi Müzesi</span>
+                        <span class="badge bg-warning text-dark fs-6 fw-normal shadow-sm">Atakum Sahili</span>
+                        <span class="badge bg-danger fs-6 fw-normal shadow-sm">Tekkeköy Mağaraları</span>
                     </div>
                 </div>
-            </div>
+            </article>
 
-            <div class="col-md-7">
-                <div id="samsunSlider" class="carousel slide shadow rounded overflow-hidden" data-bs-ride="carousel">
+            <article class="col-md-7" data-aos="fade-left" data-aos-delay="200">
+                <div id="samsunSlider" class="carousel slide shadow rounded overflow-hidden border border-light" data-bs-ride="carousel">
                     <div class="carousel-indicators">
                         <button type="button" data-bs-target="#samsunSlider" data-bs-slide-to="0" class="active"></button>
                         <button type="button" data-bs-target="#samsunSlider" data-bs-slide-to="1"></button>
@@ -74,33 +81,29 @@
                     </div>
 
                     <div class="carousel-inner">
-                        <!-- SAMSUN1 = AMİSOS TEPESİ -->
                         <div class="carousel-item active">
                             <a href="samsun1.jpg" target="_blank">
                                 <img src="samsun1.jpg" class="d-block w-100" alt="Amisos Tepesi" style="height: 400px; object-fit: cover;">
                             </a>
-                            <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded"><h5>Amisos Tepesi</h5></div>
+                            <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded"><h5><i class="fa-solid fa-mountain me-2"></i>Amisos Tepesi</h5></div>
                         </div>
-                        <!-- SAMSUN2 = BANDIRMA VAPURU -->
                         <div class="carousel-item">
                             <a href="samsun2.jpg" target="_blank">
                                 <img src="samsun2.jpg" class="d-block w-100" alt="Bandırma Vapuru" style="height: 400px; object-fit: cover;">
                             </a>
-                            <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded"><h5>Bandırma Vapuru</h5></div>
+                            <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded"><h5><i class="fa-solid fa-ship me-2"></i>Bandırma Vapuru</h5></div>
                         </div>
-                        <!-- SAMSUN3 = ŞAHİNKAYA KANYONU -->
                         <div class="carousel-item">
                             <a href="samsun3.jpg" target="_blank">
                                 <img src="samsun3.jpg" class="d-block w-100" alt="Şahinkaya Kanyonu" style="height: 400px; object-fit: cover;">
                             </a>
-                            <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded"><h5>Şahinkaya Kanyonu</h5></div>
+                            <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded"><h5><i class="fa-solid fa-water me-2"></i>Şahinkaya Kanyonu</h5></div>
                         </div>
-                        <!-- SAMSUN4 = ATATÜRK HEYKELİ -->
                         <div class="carousel-item">
                             <a href="samsun4.jpg" target="_blank">
                                 <img src="samsun4.jpg" class="d-block w-100" alt="Atatürk Heykeli (Onur Anıtı)" style="height: 400px; object-fit: cover;">
                             </a>
-                            <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded"><h5>Atatürk Heykeli (Onur Anıtı)</h5></div>
+                            <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded"><h5><i class="fa-solid fa-monument me-2"></i>Atatürk Heykeli (Onur Anıtı)</h5></div>
                         </div>
                     </div>
 
@@ -111,39 +114,45 @@
                         <span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden">Sonraki</span>
                     </button>
                 </div>
-            </div>
-        </div>
+            </article>
+        </section>
 
-        <div class="row mt-2">
-            <div class="col-md-6 mb-4">
-                <div class="card shadow-sm border-0 h-100">
+        <section class="row mt-2" data-aos="fade-up" data-aos-delay="300">
+            <article class="col-md-6 mb-4">
+                <div class="card shadow border-0 h-100 hover-effect p-3">
                     <div class="card-body">
-                        <h3 class="h5 border-bottom pb-2 mb-3 text-primary">Kısa Tarihçe</h3>
+                        <h3 class="h5 border-bottom pb-2 mb-3 text-primary"><i class="fa-solid fa-book-open text-primary me-2"></i>Kısa Tarihçe</h3>
                         <p class="text-muted">Samsun, Mustafa Kemal Atatürk'ün 19 Mayıs 1919'da Bandırma Vapuru ile ayak basarak Milli Mücadele'yi başlattığı şehirdir. Bu nedenle "Atatürk'ün Şehri" olarak da bilinir. Antik çağlarda Amisos adıyla anılan şehir, tarih boyunca pek çok medeniyete ev sahipliği yapmıştır.</p>
                     </div>
                 </div>
-            </div>
+            </article>
 
-            <div class="col-md-6 mb-4">
-                <div class="card shadow-sm border-0 h-100">
+            <article class="col-md-6 mb-4">
+                <div class="card shadow border-0 h-100 hover-effect p-3">
                     <div class="card-body">
-                        <h3 class="h5 border-bottom pb-2 mb-3 text-danger">Yöresel Lezzetler</h3>
-                        <ul class="list-unstyled mb-0">
-                            <li class="mb-2"><strong>Bafra Pidesi:</strong> İnce hamuru ve özel kıymalı harcıyla meşhurdur.</li>
-                            <li class="mb-2"><strong>Samsun Simidi:</strong> Bol susamlı ve çıtır çıtır yapısıyla bilinir.</li>
-                            <li class="mb-2"><strong>Nokul:</strong> Üzümlü ve cevizli hamur işi tatlısıdır.</li>
-                            <li><strong>Çakallı Menemeni:</strong> Kaşar peyniri ve özel domatesiyle yapılan yöresel lezzet.</li>
+                        <h3 class="h5 border-bottom pb-2 mb-3 text-danger"><i class="fa-solid fa-utensils text-danger me-2"></i>Yöresel Lezzetler</h3>
+                        <ul class="list-unstyled mb-0 text-muted">
+                            <li class="mb-2"><i class="fa-solid fa-check text-success me-2"></i><strong>Bafra Pidesi:</strong> İnce hamuru ve özel kıymalı harcıyla meşhurdur.</li>
+                            <li class="mb-2"><i class="fa-solid fa-check text-success me-2"></i><strong>Samsun Simidi:</strong> Bol susamlı ve çıtır çıtır yapısıyla bilinir.</li>
+                            <li class="mb-2"><i class="fa-solid fa-check text-success me-2"></i><strong>Nokul:</strong> Üzümlü ve cevizli hamur işi tatlısıdır.</li>
+                            <li><i class="fa-solid fa-check text-success me-2"></i><strong>Çakallı Menemeni:</strong> Kaşar peyniri ve özel domatesiyle yapılan yöresel lezzet.</li>
                         </ul>
                     </div>
                 </div>
-            </div>
-        </div>
+            </article>
+        </section>
     </main>
 
-    <footer class="text-center py-4 text-muted border-top bg-white">
-        <p class="mb-0">&copy; 2026 Görkem Polat | Web Teknolojileri Projesi</p>
+    <footer class="bg-dark text-white text-center py-4 border-top border-secondary mt-5">
+        <div class="container">
+            <p class="mb-1">© 2026 Görkem Polat | Web Teknolojileri Projesi</p>
+        </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 800, once: true });
+    </script>
 </body>
 </html>
