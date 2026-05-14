@@ -5,10 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Görkem Polat - Giriş Yap</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="bg-light">
-    <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+
+    <nav class="navbar navbar-expand-lg bg-dark sticky-top" data-bs-theme="dark">
         <div class="container">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -27,37 +30,91 @@
         </div>
     </nav>
 
-    <header class="text-white text-center py-5 mb-5 shadow-sm" style="background: linear-gradient(135deg, #6f42c1, #d63384);">
+    <header class="text-white text-center py-5 mb-5 shadow-sm" style="background: linear-gradient(135deg, #6f42c1, #d63384);" data-aos="fade-down">
         <div class="container py-3">
-            <h1 class="display-4 fw-bold">Yönetici Girişi</h1>
-            <p class="lead mb-0 text-light">Lütfen bilgilerinizi giriniz</p>
+            <h1 class="display-4 fw-bold"><i class="fa-solid fa-right-to-bracket me-3"></i>Öğrenci Girişi</h1>
+            <p class="lead mb-0 text-light fw-bold">Sakarya Üniversitesi Öğrenci Bilgi Sistemi (ÖBS) Simülasyonu</p>
         </div>
     </header>
 
     <main class="container mb-5">
         <div class="row justify-content-center">
-            <div class="col-md-5">
-                <div class="card shadow-sm border-0 p-4">
-                    <form action="login.php" method="POST">
-                        <div class="mb-3">
-                            <label for="kullanici" class="form-label">Öğrenci Numaranız (Kullanıcı Adı)</label>
-                            <input type="email" class="form-control" id="kullanici" name="kullanici" placeholder="örnek@sakarya.edu.tr" required>
+            <div class="col-md-6 col-lg-5" data-aos="zoom-in" data-aos-delay="100">
+                <div class="card shadow-lg border-0 hover-effect overflow-hidden">
+                    
+                    <div class="bg-primary" style="height: 5px;"></div>
+
+                    <div class="card-body p-4 p-md-5">
+                        <div class="text-center mb-4">
+                            <div class="d-inline-block bg-light rounded-circle p-3 mb-3 border border-secondary shadow-sm">
+                                <i class="fa-solid fa-user-graduate fs-1 text-primary"></i>
+                            </div>
+                            <h2 class="h4 fw-bold text-dark">Sisteme Giriş</h2>
+                            <p class="text-muted small">Lütfen okul mailinizi ve şifrenizi giriniz.</p>
                         </div>
-                        <div class="mb-4">
-                            <label for="sifre" class="form-label">Şifre</label>
-                            <input type="password" class="form-control" id="sifre" name="sifre" required>
+
+                        <div id="hataKutusu" class="alert alert-danger d-none shadow-sm text-center fw-bold" role="alert">
+                            <i class="fa-solid fa-triangle-exclamation me-2"></i> <span id="hataMetni"></span>
                         </div>
-                        <button type="submit" class="btn btn-primary w-100 fw-bold">Giriş Yap</button>
-                    </form>
+
+                        <form action="login.php" method="POST">
+                            
+                            <div class="mb-4">
+                                <label for="kullanici" class="form-label fw-bold"><i class="fa-solid fa-envelope text-primary me-1"></i> Öğrenci E-posta</label>
+                                <div class="input-group">
+                                    <span class="input-group-text bg-light"><i class="fa-solid fa-at"></i></span>
+                                    <input type="email" class="form-control bg-light" id="kullanici" name="kullanici" placeholder="b2412100001@sakarya.edu.tr" required>
+                                </div>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <label for="sifre" class="form-label fw-bold"><i class="fa-solid fa-lock text-primary me-1"></i> Şifre (Öğrenci No)</label>
+                                <div class="input-group">
+                                    <span class="input-group-text bg-light"><i class="fa-solid fa-key"></i></span>
+                                    <input type="password" class="form-control bg-light" id="sifre" name="sifre" placeholder="Örn: b2412100001" required>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary w-100 fw-bold py-2 shadow-sm mb-3">
+                                <i class="fa-solid fa-arrow-right-to-bracket me-2"></i> Giriş Yap
+                            </button>
+
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
     </main>
 
-    <footer class="text-center py-4 text-muted border-top bg-white">
+    <footer class="text-center py-4 text-muted border-top bg-white mt-auto">
         <p class="mb-0">&copy; 2026 Görkem Polat | Web Teknolojileri Projesi</p>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <script>
+        AOS.init({ duration: 800, once: true });
+
+        // URL'deki hata parametrelerini kontrol eden zeki script
+        // PHP sayfasından header("Location: login.html?hata=bos") veya ?hata=yanlis gibi dönerse yakalar
+        document.addEventListener("DOMContentLoaded", function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const hataDurumu = urlParams.get('hata');
+            const hataKutusu = document.getElementById('hataKutusu');
+            const hataMetni = document.getElementById('hataMetni');
+
+            if (hataDurumu) {
+                if (hataDurumu === 'bos') {
+                    hataMetni.innerText = "Kullanıcı adı veya şifre boş bırakılamaz!";
+                } else if (hataDurumu === 'yanlis') {
+                    hataMetni.innerText = "Kullanıcı adı veya şifre hatalı!";
+                } else {
+                    hataMetni.innerText = "Giriş yapılamadı, lütfen tekrar deneyin.";
+                }
+                hataKutusu.classList.remove('d-none');
+            }
+        });
+    </script>
 </body>
 </html>

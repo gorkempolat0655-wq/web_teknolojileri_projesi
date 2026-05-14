@@ -1,42 +1,64 @@
 <?php
-// Kullanıcı adı ve şifre tanımı (Buraya kendi numaranı yaz)
-$dogru_kullanici = "b251234567@sakarya.edu.tr";
-$dogru_sifre = "b251234567";
+// Sisteme giriş için tanımlı geçerli kullanıcı bilgileri
+$dogru_kullanici = "b251210040@sakarya.edu.tr"; 
+$dogru_sifre = "b251210040";
 
-// Formdan gelen verileri al
-$gelen_kullanici = $_POST['kullanici'] ?? '';
-$gelen_sifre = $_POST['sifre'] ?? '';
+// Formdan POST ile veri gelip gelmediğinin kontrolü
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    
+    // Gelen verilerdeki boşlukları temizle
+    $kullanici = trim($_POST['kullanici']);
+    $sifre = trim($_POST['sifre']);
 
-// Kontrol işlemi
-if ($gelen_kullanici === $dogru_kullanici && $gelen_sifre === $dogru_sifre) {
-    // Giriş Başarılı
-    $mesaj = "Hoşgeldiniz " . htmlspecialchars($gelen_sifre) . " numaralı öğrenci!";
-    $renk = "success"; // Yeşil
+    // Alanların boş bırakılma durumu kontrolü
+    if (empty($kullanici) || empty($sifre)) {
+        header("Location: login.html?hata=bos");
+        exit();
+    }
+
+    // Kullanıcı adı ve şifre eşleşme kontrolü (Başarılı Giriş)
+    if ($kullanici === $dogru_kullanici && $sifre === $dogru_sifre) {
+        ?>
+        <!DOCTYPE html>
+        <html lang="tr">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Giriş Başarılı</title>
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+            <style>
+                body {
+                    background: linear-gradient(135deg, #198754, #20c997);
+                    height: 100vh;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+            </style>
+        </head>
+        <body>
+            <div class="card shadow-lg border-0 p-5 text-center" style="max-width: 500px; border-radius: 20px;">
+                <div class="mb-4">
+                    <i class="fa-solid fa-circle-check text-success" style="font-size: 5rem;"></i>
+                </div>
+                <h1 class="display-5 fw-bold text-dark mb-3">Hoşgeldiniz <?php echo $dogru_sifre; ?></h1>
+                <p class="text-muted fs-5 mb-4">Sakarya Üniversitesi Öğrenci Bilgi Sistemine başarıyla giriş yaptınız.</p>
+                <a href="index.html" class="btn btn-success btn-lg fw-bold rounded-pill shadow-sm px-5">Ana Sayfaya Git</a>
+            </div>
+        </body>
+        </html>
+        <?php
+        exit();
+    } 
+    // Eşleşme başarısız (Hatalı Giriş)
+    else {
+        header("Location: login.html?hata=yanlis");
+        exit();
+    }
 } else {
-    // Giriş Başarısız
-    $mesaj = "Hatalı Giriş! Lütfen kullanıcı adı veya şifrenizi kontrol edin.";
-    $renk = "danger"; // Kırmızı
+    // Sayfaya URL üzerinden izinsiz giriş yapılmaya çalışılırsa login'e geri at
+    header("Location: login.html");
+    exit();
 }
 ?>
-
-<!DOCTYPE html>
-<html lang="tr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Giriş Sonucu</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-</head>
-<body class="bg-light d-flex align-items-center vh-100">
-    <div class="container text-center">
-        <div class="alert alert-<?php echo $renk; ?> shadow-sm d-inline-block p-4" role="alert">
-            <h3 class="mb-3"><?php echo $mesaj; ?></h3>
-            <?php if($renk === "danger"): ?>
-                <a href="login.html" class="btn btn-outline-danger mt-2">Tekrar Dene</a>
-            <?php else: ?>
-                <a href="index.html" class="btn btn-success mt-2">Ana Sayfaya Git</a>
-            <?php endif; ?>
-        </div>
-    </div>
-</body>
-</html>
