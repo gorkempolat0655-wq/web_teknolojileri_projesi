@@ -97,7 +97,7 @@
         AOS.init({ duration: 800, once: true });
 
         // URL'deki hata parametrelerini kontrol eden zeki script
-        // PHP sayfasından header("Location: login.html?hata=bos") veya ?hata=yanlis gibi dönerse yakalar
+       
         document.addEventListener("DOMContentLoaded", function() {
             const urlParams = new URLSearchParams(window.location.search);
             const hataDurumu = urlParams.get('hata');
